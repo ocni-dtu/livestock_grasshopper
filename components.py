@@ -132,6 +132,7 @@ class PythonExecutor(GHComponent):
         self.inputs = inputs()
         self.outputs = outputs()
         self.description = 'Path to python executor'
+        self.name = 'Python Executor'
         self.py_exe = None
         self.checks = False
         self.results = None
@@ -178,7 +179,7 @@ class PythonExecutor(GHComponent):
             sc.sticky['PythonExe'] = self.py_exe
 
 
-class NewAirConditions(GHComponent):
+class MyComponent(GHComponent):
 
     def __init__(self, ghenv):
         GHComponent.__init__(self, ghenv)
@@ -210,10 +211,10 @@ class NewAirConditions(GHComponent):
 
         self.inputs = inputs()
         self.outputs = outputs()
+        self.name = 'My Component'
         self.my_input = None
         self.folder = None
         self.run_component = None
-        self.area = None
         self.py_exe = gh_misc.get_python_exe()
         self.checks = False
         self.results = None

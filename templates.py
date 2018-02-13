@@ -34,12 +34,12 @@ def my_template(path):
     :return: The file name
     """
 
-    file_name = r'/new_air_conditions_template.py'
+    file_name = r'/my_template.py'
     file = open(path + file_name, 'w')
 
     file.write("# Imports\n")
-    file.write("import sys")
-    file.write("sys.path.insert(0, r'C:\livestock')")
+    file.write("import sys\n")
+    file.write("sys.path.insert(0, r'C:\livestock')\n")
     file.write("import livestock3d.lib as ll\n")
 
     file.write("# Run function\n")
